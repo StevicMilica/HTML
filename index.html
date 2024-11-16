@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prvi sajt</title>
+        <link rel="stylesheet" href="assets/style/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <!--HTML5 element koji predstavlja zaglavlje stranice i sadrzi navigaciju, logotip...-->
+            <header>
+                <div id="logo">
+                    <img src="assets/images/logo.png" alt="Logo">
+                </div>
+                <!--Navigacioni meni - obicno je za linkove ka razlicitim delovima sajta-->
+                <nav>
+                    <!--unored list- neuredjena lista-->
+                    <ul>
+                        <li>
+                            <a href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <!--ovaj link vodi do sekcije sa ID-om 'galerija' na istoj stranici tzv 'anchor link'-->
+                            <a href="#galerija">GALLERY</a>
+                        </li>
+                        <li>
+                            <a href="#mapa">MAP</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="pozadina">
+                <h1>Pocetna</h1>
+            </div>
+            <!--ovaj div sa ID-om 'galerija' sadrzi slike galerije-->
+            <div id="galerija">
+                <!--klasa za prikazivanje trecine stranice-->
+                <div class="trecina">
+                    <!--moze biti zamenjena stvarnim slikama iz galerije-->
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <p>Slika 1</p>
+                </div>
+                <div class="trecina">
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <p>Slika 2</p>
+                </div>
+                <div class="trecina">
+                    <img src="assets/images/logo.png" alt="Logo">
+                    <p>Slika 3</p>
+                </div>
+            </div>
+            <!--sadrzi google mapu-->
+            <div id="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11329.887741337274!2d20.
+                4676418!3d44.7711832!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7050f09d730f%3A0x35215c09ab515b2a!
+                2s%D0%9Cilitary%20Academy!5e0!3m2!1sen!2srs!4v1730644921004!5m2!1sen!2srs" 
+                width="950" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <!--uglavnom sadrzi autorska prava-->
+            <footer>
+                <!--&copy je simbol za autorska prava. Ovde je oznaceno da pripada Milici-->
+                &copy; Milica 2024
+            </footer>
+        </div>
+    </body>
+</html>
