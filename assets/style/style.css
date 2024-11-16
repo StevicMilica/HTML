@@ -1,0 +1,100 @@
+/*
+Pravila primenjena na sve elemente.
+Uklanja podrazumevane margine, padding (unutrasnje margine)
+i postavlja 'box-sizing:border-box' sto znaci da se dimenzije elemenata
+racunaju zajedno sa granicom (border), padding i sadrzajem.
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 980px;
+    margin: 0 auto;
+}
+header{
+    background-color: rgb(95,207,225);
+    display: flex;/*omogucava lakse postavljanje sadrzaja unutar zaglavlja*/
+    justify-content: space-between;/*razdvaja sadrzaj na dve strane - levu i desnu*/
+    align-items: center;/*ravna sadrzaj po vertikali*/
+    border: 2px solid black;
+    padding-right: 15px;
+    margin-bottom: 2px;
+    & img{
+        width: 80px;
+    }
+    & li{
+        display: inline;
+    }
+    /*linkovi unutar zaglavlja*/
+    & a{
+        text-transform: uppercase; /*pretvara text u velika slova*/
+        text-decoration: none; /*uklanja podvlacenje linkova*/
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: 20px; /*razmak ulevo izmedju linkova*/
+    }
+}
+#pozadina{
+    background: url(../images/pozadina.jpg) no-repeat; /*postavlja pozadinsku sliku*/
+    height: 500px;
+    background-size: cover;/*osigurava da slika u potpunosti pokrije sekciju*/
+    display: flex;/*omogucava da se sadrzaj unutar sekcije postavlja fleksibilno*/
+    text-align: center;
+    align-items: center;
+    color: black;
+    font-size: 60px;
+    text-transform: uppercase;  
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+#galerija{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    text-align: center;
+    padding: 100px 0;
+    background-color: lightblue;
+    border: 2px solid black;
+    margin-bottom: 3px;
+    /*slike unutar galerije*/
+    & img{
+        width: 200px;
+    }
+}
+footer{
+    background-color: rgb(95,207,225);
+    color: black;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: -5px;
+}
+#mapa{
+    background-color: rgb(95,207,225);
+    margin-bottom: 10px;
+    padding: 5px;
+    justify-content: center;
+    display: flex;
+}
+/*
+ako je sirina ekrana 768px ili manja (npr na tabletima), galerija ce se 
+prikazivati kao 'block' tj. elementi ce biti jedni ispod drugih umesto u kolonama.
+*/
+@media screen and (max-width: 768px){
+    #galerija{
+        display: block;
+    }
+    .container{
+        width: 100%;
+    }
+    #pocetna{
+         font-size: 30px;
+         /*osigurava da se pozadina prilagodi tako da se uvek vidi cela bez obzira na velicinu ekrana*/
+         background-size: contain;
+         height: 275px !important; /*nadjacava druge postavljene visine*/
+    }
+}
